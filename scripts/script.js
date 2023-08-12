@@ -6,6 +6,7 @@ localStorage.clear()
 const form_title = document.getElementById('form-title');
 const form_subtitle = document.getElementById('form-subtitle');
 const sidebar_counter = [...document.getElementsByClassName('active-form-counter')];
+const sidebar_counter_mob = [...document.getElementsByClassName('active-form-counter-mob')];
 
 // form container 
 const form_container = document.getElementsByClassName('form-container')[0];
@@ -91,6 +92,9 @@ function loadFourthForm(){
     sidebar_counter.forEach(e=> e.classList.remove('counter-active'));
     sidebar_counter.at(3).classList.add('counter-active');
 
+    sidebar_counter_mob.forEach(e=> e.classList.remove('counter-active'));
+    sidebar_counter_mob.at(3).classList.add('counter-active');
+
     forms[2].classList.add('hidden');
     forms[3].classList.remove('hidden');
 
@@ -167,6 +171,9 @@ function loadThirdForm(){
     sidebar_counter.forEach(e=> e.classList.remove('counter-active'));
     sidebar_counter.at(2).classList.add('counter-active');
 
+    sidebar_counter_mob.forEach(e=> e.classList.remove('counter-active'));
+    sidebar_counter_mob.at(2).classList.add('counter-active');
+
     forms[1].classList.add('hidden');
     forms[2].classList.remove('hidden');
 
@@ -180,6 +187,9 @@ function loadSecondForm(){
 
     sidebar_counter.forEach(e=> e.classList.remove('counter-active'));
     sidebar_counter.at(1).classList.add('counter-active');
+
+    sidebar_counter_mob.forEach(e=> e.classList.remove('counter-active'));
+    sidebar_counter_mob.at(1).classList.add('counter-active');
 
     // checking which subscription type user has chosen
     const btn_toggle = document.getElementById('toggle-btn');
@@ -279,6 +289,9 @@ function loadFirstForm(){
 
     sidebar_counter.forEach(e=> e.classList.remove('counter-active'));
     sidebar_counter.at(0).classList.add('counter-active');
+
+    sidebar_counter_mob.forEach(e=> e.classList.remove('counter-active'));
+    sidebar_counter_mob.at(0).classList.add('counter-active');
 
     
     if (form_validate) {
