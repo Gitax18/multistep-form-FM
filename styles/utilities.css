@@ -209,7 +209,6 @@ button.disable:is(:hover, :active){
 
 /* sidebar for mobiles */
 .sidebar-mobile{
-    background-color: red;
     position: absolute;
     top: 0;
     left: 0;
