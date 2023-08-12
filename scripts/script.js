@@ -10,6 +10,7 @@ const sidebar_counter_mob = [...document.getElementsByClassName('active-form-cou
 
 // form container 
 const form_container = document.getElementsByClassName('form-container')[0];
+const container = document.getElementsByClassName('container')[0];
 
 // form dynamic container 
 const dynamic_container = document.getElementById('dynamic-container');
@@ -201,12 +202,15 @@ function loadSecondForm(){
 
             if(w <= 540 ){
                 cards.forEach(c => c.style.height = '9rem');
+                container.style.height = '75%'
             } else cards.forEach(c => c.style.height = '14rem');
             
             sub_price.forEach(c => c.textContent = '0/yr');
             yearly_offer.forEach(o => o.classList.remove('hidden'));
             subs_type[1].classList.add('type-active');
             subs_type[0].classList.remove('type-active');
+
+
             
             localStorage.setItem('subs_type', 'yr');
             
@@ -223,6 +227,7 @@ function loadSecondForm(){
 
             if(w <= 540 ){
                 cards.forEach(c => c.style.height = '8rem');
+                container.style.height = '70%'
             } else cards.forEach(c => c.style.height = '13rem');
 
             sub_price.forEach(c => c.textContent = '/mo');
