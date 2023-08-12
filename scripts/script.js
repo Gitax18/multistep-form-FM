@@ -200,7 +200,7 @@ function loadSecondForm(){
             btn_toggle.checked = true;
 
             if(w <= 540 ){
-                cards.forEach(c => c.style.height = '8rem');
+                cards.forEach(c => c.style.height = '9rem');
             } else cards.forEach(c => c.style.height = '14rem');
             
             sub_price.forEach(c => c.textContent = '0/yr');
@@ -222,7 +222,7 @@ function loadSecondForm(){
             // cards.forEach(c => c.style.height = '13rem');
 
             if(w <= 540 ){
-                cards.forEach(c => c.style.height = '7rem');
+                cards.forEach(c => c.style.height = '8rem');
             } else cards.forEach(c => c.style.height = '13rem');
 
             sub_price.forEach(c => c.textContent = '/mo');

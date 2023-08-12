@@ -127,6 +127,7 @@
         grid-template-columns: 1fr 3fr;
         height: 8rem;
         align-items: center;
+        padding-block: 1rem;
     }
     .card-text{
         gap: .8rem;
