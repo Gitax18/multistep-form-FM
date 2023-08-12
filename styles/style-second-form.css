@@ -125,7 +125,7 @@
     .card{
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 3fr;
-        height: 3rem;
+        height: 8rem;
         align-items: center;
     }
     .card-text{
