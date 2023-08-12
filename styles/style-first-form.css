@@ -10,77 +10,8 @@
     color: var(--purpulish-blue); 
 }
 
-/* form container design */
-
-.container{
-    background-color: var(--White);
-    width: 80rem;
-    aspect-ratio: 1.5/1;    
-    grid-template-columns: 1fr 2fr;
-    padding: 1rem;
-    border-radius: 2rem;
-    overflow: hidden;
-    box-shadow: 1px 1px 25px 1px rgba(0, 0, 0, 0.15);
-}
-
-/* designing the sidebar */
-.sidebar{
-    background-image: url('assets/images/bg-sidebar-desktop.svg');
-    background-size: cover;
-    border-radius: 1rem;
-    overflow: hidden;
-    padding: 3rem ;
-}
-
-.list-section{
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-    text-transform: uppercase;
-}
-
-.list-section li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.number{
-    width: 3rem;
-    aspect-ratio: 1/1;
-    font-size: 1.2rem;
-    border: 1px solid var(--Light-gray);
-    display: flex;
-    font-weight: 600;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: var(--White);
-}
-
-.number-sub{
-    color: var(--Pastel-blue);
-    font-weight: 500;
-}
-
-.number-title{
-    color: var(--Magnolia);
-    font-weight: 500;
-    font-size: 1.2rem;
-    letter-spacing: .075rem;
-}
-
-.counter-active .number{
-    color: var(--Marine-blue);
-    background-color: var(--Light-blue  );
-}
-
 /* designing the form */
-.form-container{
-    padding: 4rem 5rem 0 8rem;
-    position: relative;
-}
+
 
 
 

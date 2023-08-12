@@ -119,3 +119,24 @@
 .toggle-btn input:checked + .slider::before{
     transform: translateX(2.1rem);
 }
+
+
+@media screen and (max-width:540px) {
+    .card{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 3fr;
+        height: 3rem;
+        align-items: center;
+    }
+    .card-text{
+        gap: .8rem;
+    }
+
+    .card-title{
+        font-size: 2rem;
+    }
+
+    .logo svg{
+        height: 5rem;
+    }
+}

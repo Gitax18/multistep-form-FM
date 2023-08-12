@@ -116,3 +116,9 @@
 .thank-you-text::first-letter{
     text-transform: capitalize;
 }
+
+@media screen and (max-width:540px) {
+    .thank-you-text{
+        width: 30rem;
+    }
+}

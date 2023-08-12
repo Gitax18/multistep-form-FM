@@ -183,12 +183,17 @@ function loadSecondForm(){
 
     // checking which subscription type user has chosen
     const btn_toggle = document.getElementById('toggle-btn');
+    let w = window.innerWidth;
+
     setInterval(()=>{
         if (btn_toggle.checked){
             btn_toggle.checked = true;
+
+            if(w <= 540 ){
+                cards.forEach(c => c.style.height = '8rem');
+            } else cards.forEach(c => c.style.height = '14rem');
             
             sub_price.forEach(c => c.textContent = '0/yr');
-            cards.forEach(c => c.style.height = '14rem');
             yearly_offer.forEach(o => o.classList.remove('hidden'));
             subs_type[1].classList.add('type-active');
             subs_type[0].classList.remove('type-active');
@@ -204,8 +209,13 @@ function loadSecondForm(){
         } else{
             btn_toggle.checked = false;
 
+            // cards.forEach(c => c.style.height = '13rem');
+
+            if(w <= 540 ){
+                cards.forEach(c => c.style.height = '7rem');
+            } else cards.forEach(c => c.style.height = '13rem');
+
             sub_price.forEach(c => c.textContent = '/mo');
-            cards.forEach(c => c.style.height = '13rem');
             yearly_offer.forEach(o => o.classList.add('hidden'));
             subs_type[0].classList.add('type-active');
             subs_type[1].classList.remove('type-active');
@@ -219,6 +229,8 @@ function loadSecondForm(){
         }
         
     }, 250);
+
+    
 
     console.log('second form loaded');
     forms[1].classList.remove('hidden');
