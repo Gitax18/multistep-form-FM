@@ -1,0 +1,121 @@
+/* card design */
+.plan-cards{
+    margin-top: 4rem;
+}
+
+.card{
+    height: 13rem;
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+    padding: 1rem;
+    border: 1px solid var(--Cool-gray);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+.card-active{
+    background-color:  hsl(243, 100%, 62%, .05);
+}
+
+.card-active,
+.card:hover{
+    border-color: var(--Purplish-blue);
+}
+
+.logo svg{
+    aspect-ratio: 1/1;
+    height: 3.5rem;
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.card-title{
+    text-transform: capitalize;
+    color: var(--Marine-blue);
+    font-size: 1.4rem;
+}
+
+.price,
+.card-price{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--Cool-gray);
+}
+
+.yearly-offer{
+    font-size: 1.2rem;
+    color: var(--Marine-blue);
+    letter-spacing: -.35px;
+}
+
+
+
+/* subcription type toggle btn */
+.toggle-subscription{
+    background-color: var(--Alabaster);
+    margin-block: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.subs-type{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--Cool-gray);
+}
+
+.type-active{
+    color: var(--Marine-blue);
+}
+
+.toggle-btn{
+    position: relative;
+    height: 2rem;
+    width: 4rem;
+    background-color: #fff;
+}
+
+.toggle-btn input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10rem ;
+    background-color: var(--Marine-blue);
+    transition: all 400ms ease;
+
+}
+
+.slider::before{
+    content: '';
+    position: absolute;
+    height: 1.4rem;
+    width: 1.4rem;
+    top: .3rem;
+    left: .3rem;
+    bottom: .2rem; 
+    background-color: var(--White);
+    transition: all 400ms ease;
+    border-radius: 50%;
+}
+
+.toggle-btn input:checked + .slider::before{
+    transform: translateX(2.1rem);
+}

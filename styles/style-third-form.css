@@ -1,0 +1,51 @@
+.addon{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid var(--Purplish-blue);
+    border-radius: 1rem;
+}
+
+.addon-details{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.addon-title{
+    font-size: 1.4rem;
+    color: var(--Marine-blue);
+}
+
+.addon-desc{
+    font-size: 1.2rem;
+    color: var(--Cool-gray);
+    font-weight: 500;
+    letter-spacing: .15px;
+}
+
+.addon-desc::first-letter,
+.addon-title::first-letter{
+    text-transform: capitalize;
+}
+
+.addon-price{
+    font-size: 1.2rem;
+    color: var(--Purplish-blue);
+    font-weight: 500;
+}
+
+.addon-active{
+    background-color: hsl(243, 100%, 62%, .05);   
+}
+
+.addon input{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.addon input:checked{
+    accent-color: var(--Purplish-blue);
+}

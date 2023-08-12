@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+}
+
+:root{
+    /* primary colors */
+    --Marine-blue: hsl(213, 96%, 19%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+
+    /* neutral colors */
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: hsla(243, 100%, 62%, 0.1);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* utilities */
+.grid{
+    display: grid;
+}
+
+.grid-temp-2{
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-temp-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-temp-4{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-row-3{
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.gap-1rem{
+    gap: 1rem;
+}
+
+.gap-2rem{
+    gap: 2rem;
+}
+
+
+#form-title{
+    font-size: 2.8rem;
+    color: var(--Marine-blue);
+    margin-bottom: .8rem;
+}
+
+#form-title:nth-child(1){
+    text-transform: capitalize;
+}
+
+#form-subtitle{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--Cool-gray);
+    letter-spacing: .35px;
+    margin-bottom: 1.6rem;
+}
+
+#form-subtitle::first-letter{
+    text-transform: capitalize;
+}
+
+
+/* the next step button */
+button.next--step-button,
+button.go--back-button{
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-transform: capitalize;
+    position: absolute;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: .35px;
+    transition: all 200ms ease-out;
+}
+
+button.next--step-button{
+    color: var(--Magnolia); 
+    background-color: var(--Marine-blue);
+    bottom: 3rem;
+    right: 5rem;
+    border-radius: .5rem;
+    height: 4rem;
+    border: none;
+    padding-inline: 2rem;
+}
+
+button.next--step-button:is(:hover, :active){
+    opacity: .8;
+}
+
+button.go--back-button{
+    bottom: 4rem;
+    color: var(--Cool-gray);
+    background-color: transparent;
+    font-weight: 600;
+    border: none;
+    left: 8rem;
+}
+
+button.go--back-button:is(:hover, :active){
+    color: var(--Marine-blue);
+}
+
+button.disable:is(:hover, :active){
+    color: var(--Cool-gray);
+}
